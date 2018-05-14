@@ -1,20 +1,12 @@
 function assignProperties(items){
-    let itemsArr = [items];
-    let array = [];
+    let firstKey = items[0];
+    let valueOfFirstKey = items[1];
 
-    for(let i = 0; i < itemsArr.length; i++){
-        array[i] = itemsArr[i];
-    }
-    let result = '';
-    let row = 0;
-    for(let person of array){
-        result +=person;
-        result += ': ';
-        if(row == 2){
-            result +=',\n';
-            result +='  ';
-            row = 0;
-        }
-    }
-    console.log(result);
+    let secondKey = items[2];
+    let valueOfSecondKey = items[3];
+
+    let thirdKey = items[4];
+    let valueOfThirdKey = items[5];
+
+    return JSON.parse(`{ "${firstKey}": "${valueOfFirstKey}", "${secondKey}": "${valueOfSecondKey}", "${thirdKey}": "${valueOfThirdKey}" }`);
 }
