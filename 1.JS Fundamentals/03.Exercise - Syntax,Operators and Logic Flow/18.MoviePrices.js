@@ -1,8 +1,6 @@
-function calcPrice(movieTitle, dayOfWeek){
-    let toLowerCaseMovieTitle = movieTitle + '';
-    toLowerCaseMovieTitle = toLowerCaseMovieTitle.toLowerCase();
-    let toLowerCaseDayOfWeek = dayOfWeek + '';
-    toLowerCaseDayOfWeek = toLowerCaseDayOfWeek.toLowerCase();
+function calcPrice(input){
+    let toLowerCaseMovieTitle = input[0];
+    let toLowerCaseDayOfWeek = input[1];
 
     let price = 0;
     switch(toLowerCaseMovieTitle){
@@ -29,6 +27,8 @@ function calcPrice(movieTitle, dayOfWeek){
                 case 'sunday':
                     price = 30;
                     break;
+                default:
+                    return 'error';
         }
            break;
            case 'schindler\'s list':
@@ -54,6 +54,8 @@ function calcPrice(movieTitle, dayOfWeek){
                 case 'sunday':
                     price = 15;
                     break;
+                default:
+                    return 'error';
         }
            break;
            case 'casablanca':
@@ -79,6 +81,8 @@ function calcPrice(movieTitle, dayOfWeek){
                 case 'sunday':
                     price = 10;
                     break;
+                default:
+                    return 'error';
         }
            break;
            case 'the wizard of oz':
@@ -104,10 +108,12 @@ function calcPrice(movieTitle, dayOfWeek){
                 case 'sunday':
                     price = 15;
                     break;
+                 default:
+                    return 'error';
         }
            break;
            default:
-           return 'error';
+            return 'error';
     }
     console.log(price);
 }
