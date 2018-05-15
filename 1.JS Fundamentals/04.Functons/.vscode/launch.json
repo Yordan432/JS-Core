@@ -10,7 +10,7 @@
             "request": "launch",
             "name": "Launch Program",
             "program": "${file}",
-            "runtimeExecutable": "C:\\Program Files\nodejs\node.exe",
+            "runtimeExecutable": "C:\\Windows\\System32\\cmd.exe /k \"C:\\Program Files\nodejs\nodevars.bat",
             "outFiles": []
         },
         {
