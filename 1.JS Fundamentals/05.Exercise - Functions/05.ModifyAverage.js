@@ -1,20 +1,22 @@
 function modifiAverage(number){
-    let isAverageHigerThan5 = false;
+    let strNumber = number.toString();
 
-    let sumDigit = sumDigit(number);
-        console.log(sumDigit);
-    while(!isAverageHigerThan5){
-    
-        //let averageSumDigit;
-        break;
-    }
-    function sumDigit(number){
+    while(true)
+    { 
         let sum = 0;
-        while(number > 0){
-            let digit = number % 10;
-            sum +=digit;
-            number /=10;
+        for(let i=0; i<strNumber.length; i++){
+            sum = newFunction(sum, i);
         }
+        if((sum / strNumber.length) <=5){
+            strNumber +='9';
+        }else {
+            break;
+        }
+    }
+    console.log(strNumber);
+
+    function newFunction(sum, i) {
+        sum += Number(strNumber[i]);
         return sum;
     }
 }

@@ -1,18 +1,20 @@
 function helix(number){
-    let result = '';
-    for(let i = 0; i <number; i++){
-        result += printStart();
-        result += printSymbols('AT');
-        result += printStart();
-        result +='\n';
-        
-    }
+    const sequence = 'ATCGTTAGGG';
 
-    function printStart(){
-        return '*'.repeat(2);
+    for(let i = 0; i< number; i++){
+        let position = i % 4;
+        let sequanceIndex = (i * 2) % sequence.length;
+        switch(position){
+            case 0:
+                console.log(`**${sequence[sequanceIndex]}${sequence[sequanceIndex + 1]}**`);
+                break;
+            case 1:
+            case 3:
+            console.log(`*${sequence[sequanceIndex]}--${sequence[sequanceIndex + 1]}*`);
+                 break;
+            case 2:
+            console.log(`${sequence[sequanceIndex]}----${sequence[sequanceIndex + 1]}`);
+                 break;
+        }
     }
-    function printSymbols(str){
-        return str.repeat(1);
-    }
-    console.log(result);
 }
