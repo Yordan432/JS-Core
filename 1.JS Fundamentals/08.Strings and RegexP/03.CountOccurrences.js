@@ -1,11 +1,10 @@
 function countOccurrences(findWord, text){
     let counter = 0;
-    let arr = text.split(" ");
-    for(let i = 0; i < arr.length; i++){
-        let word = arr[i];
-        if(word.includes(findWord)){
-            counter++;
-        }
+    let index = text.indexOf(findWord);
+    while(index !== -1){
+        index++;
+        index = text.indexOf(findWord, index);
+        counter++;
     }
     console.log(counter);
 }
