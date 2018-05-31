@@ -1,16 +1,15 @@
 function escaping(array){
+    let result = '<ul>\n'
     for(let item of array)
     {
-        // find < and >  index
-        let openTag = item.indexOf('(');
-        let closeTag = item.indexOf(')');
+        let line = item.replace(/&/g, '&amp;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/</g, '&lt;');
 
-        let subStr = item.substr(openTag, 1);
-        let closeTagSub = str.substr(endIndx,1);
-        // replace tags in item
-        let replace = item.replace(subStr,'&lt;');
-        let replaceTag = item.replce(closeTagSub, '&gt;');
-
-        item.indexOf(openTag).replace();
+        result +=`  <li>${line}</li>\n`;
     }
+    result +='</ul>'
+
+    console.log(result);
 }
