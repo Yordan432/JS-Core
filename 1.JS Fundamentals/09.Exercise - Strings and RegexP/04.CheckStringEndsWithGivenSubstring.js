@@ -1,5 +1,5 @@
 function findStrInSubstring(text, substring){
-    let result = text.startsWith(substring);
+    let result = text.endsWith(substring);
 
     console.log(result);
 }
