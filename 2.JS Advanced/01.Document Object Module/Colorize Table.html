@@ -18,17 +18,18 @@
       <button onclick="colorize()">Colorize</button>
       <script>
         function colorize() {
-          let items = document.getElementById('table').children;
-          let index = 0;
+          let items = document.querySelectorAll('table tr');
+          let i = 1;
           for(let item of items)
           {
-              index++;
-              if(index % 2 == 0)
+              if(i % 2 == 0)
               {
-                item.style.background = 'teal';
+                  item.style.backgroundColor = 'teal';
               }
+              i++;
           }
         }
       </script>
+      
 </body>
 </html>
