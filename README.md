@@ -1,4 +1,4 @@
-# Courses at SoftUni JS
-#JavaScript Fundamentals
-#JavaScript Advanced
+# Courses at SoftUni JS CORE
+#JavaScript Fundamentals\n
+#JavaScript Advanced\n
 #JavaScript Applications
