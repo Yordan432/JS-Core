@@ -28,7 +28,15 @@
     </div>
     <script>
       function focus() {
-        
+        let input = document.getElementsByTagName('input');
+        Array.from(input).forEach(el => {
+          el.addEventListener('focus', (event) => {
+            event.target.parentNode.className = 'focused';
+          })
+          el.addEventListener('blur', (event) => {
+            event.target.parentNode.removeAttribute('class');
+          })
+        })
       }
     </script>
   </body>
