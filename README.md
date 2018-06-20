@@ -20,6 +20,7 @@
 - [ ]     Learning JS Classes
 - [ ]     Learning Prototype Chain
 - [ ]     Learning Modules
+
 **JavaScript Applications Topic**
 - [ ] Learning REST Services
 - [ ]     Learning AJAX and jQuery AJAX
