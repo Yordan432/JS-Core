@@ -1,5 +1,8 @@
 #Courses at SoftUni JS CORE
 
+![javascript-fundamentals](https://user-images.githubusercontent.com/20492752/41656998-771fd45a-749a-11e8-83ce-2c7ea76f26bd.jpg)
+
+
 #JavaScript Fundamentals
 Topic
 - Learning Basics JavaScript
