@@ -1,14 +1,19 @@
 let expect = require('chai').expect;
 
-function sum(arra){
+function sumArray(array){
     let sum = 0;
     for(let item of array)
     {
         sum +=item;
     }
-};
-describe("sum(arr)", function(){
-    it("should return 3 for [1,2]", function(){
-        expect(sum([1,2])).to.be.equal(3);
+    return sum;
+}
+
+describe('TestArray()', function(){
+    it('should be [1,2] equal 3', function(){
+        expect(sumArray([1,2])).to.be.equal(3);
     });
-});
+    it('should be []', function(){
+        expect(sumArray([])).to.be.equal(0);
+    })
+})
